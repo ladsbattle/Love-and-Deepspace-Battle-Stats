@@ -755,9 +755,10 @@ function dirTag(dir) {
 
 function modalBlock(card, partner, dir) {
   if (card === 'N/A') return '<div class="modal-row"><span class="na-text" style="color:var(--text-dim)">單層面板（無此層配置）</span></div>';
+  const dirText = dir === '順' ? '順譜' : dir === '逆' ? '逆譜' : '—';
   return `<div class="modal-row"><span class="modal-label">日卡</span><span class="modal-val">${card}</span></div>
     <div class="modal-row"><span class="modal-label">搭檔</span><span class="modal-val">${partner}</span></div>
-    <div class="modal-row"><span class="modal-label">譜面</span>${dirTag(dir)}</div>`;
+    <div class="modal-row"><span class="modal-label">對譜情形</span><span class="modal-val">${dirText}</span></div>`;
 }
 
 function openModal(idx) {
