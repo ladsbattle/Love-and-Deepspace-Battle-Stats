@@ -765,6 +765,11 @@ function openModal(idx) {
   const d = currentData[idx];
   document.getElementById('mOrbit').innerHTML = `<span class="orbit-badge" data-orbit="${d.orbit}">${d.orbit}軌道</span>`;
   document.getElementById('mLayer').textContent = d.layer;
+const orbitColors = {
+  開放: 'var(--col-open)', 光: 'var(--col-light)', 冰: 'var(--col-ice)',
+  火: 'var(--col-fire)', 能量: 'var(--col-energy)', 引力: 'var(--col-gravity)'
+};
+document.getElementById('mLayer').style.color = orbitColors[d.orbit] || 'var(--text)';
   document.getElementById('mUpperContent').innerHTML = modalBlock(d.upperCard, d.upperPartner, d.upperDir);
   document.getElementById('mLowerContent').innerHTML = modalBlock(d.lowerCard, d.lowerPartner, d.lowerDir);
 
