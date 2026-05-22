@@ -774,15 +774,15 @@ document.getElementById('mLayer').style.color = orbitColors[d.orbit] || 'var(--t
   document.getElementById('mLowerContent').innerHTML = modalBlock(d.lowerCard, d.lowerPartner, d.lowerDir);
 
   const subj = encodeURIComponent(`【面板連結回報】${d.orbit}軌道 ${d.layer}層`);
-  const body = encodeURIComponent(`回報面板：\n軌道：${d.orbit}\n層數：${d.layer}\n上層日卡：${d.upperCard !== 'N/A' ? d.upperCard : '無'}\n下層日卡：${d.lowerCard !== 'N/A' ? d.lowerCard : '無'}\n連結：${d.link}\n\n問題說明（請填寫）：`);
+  const body = encodeURIComponent(`✦ 回報面板：\n軌道：${d.orbit}\n｜層數：${d.layer}\n｜上層日卡：${d.upperCard !== 'N/A' ? d.upperCard : '無'}\n｜下層日卡：${d.lowerCard !== 'N/A' ? d.lowerCard : '無'}\n｜連結：${d.link}\n\n✦ 問題說明：`);
 
   document.getElementById('mFooter').innerHTML = `
     <a href="${d.link}" target="_blank" rel="noopener" class="btn-fb">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
       前往Facebook查看
     </a>
-    <a href="mailto:rhthv6hbw6@privaterelay.appleid.com?subject=${subj}&body=${body}" class="btn-report">
-      ⚠ 錯誤回報（連結失效）
+    <a href="mailto:ladsbattle@gmail.com?subject=${subj}&body=${body}" class="btn-report">
+      ⚠ 錯誤回報
     </a>`;
 
   document.getElementById('modalOverlay').classList.add('show');
@@ -791,7 +791,7 @@ document.getElementById('mLayer').style.color = orbitColors[d.orbit] || 'var(--t
 function closeModal(e) { if (e.target === document.getElementById('modalOverlay')) closeModalDirect(); }
 function closeModalDirect() { document.getElementById('modalOverlay').classList.remove('show'); }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
-init();
+applyFilters();
 </script>
 </body>
 </html>
