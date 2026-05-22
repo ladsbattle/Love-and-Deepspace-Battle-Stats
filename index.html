@@ -561,6 +561,8 @@ header {
   <div class="site-sub" style="margin-top: 0.3rem;">
     收錄「<a href="https://www.facebook.com/share/g/18qcHFWDrj/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">戀與深空戰鬥討論群_臉書面板分享專區</a>」之定向軌道及開放穩定軌道資料
   </div>
+  <div class="site-sub" style="margin-top: 0.3rem;"> 歡迎查詢，也歡迎至社團分享通關資料
+    </div>
 </header>
 
 <div class="container">
@@ -747,7 +749,7 @@ function renderCards() {
   const grid = document.getElementById('cardsGrid');
   document.getElementById('resultsInfo').innerHTML = `共找到 <span>${currentData.length}</span> 筆結果`;
   if (currentData.length === 0) {
-    grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1"><div style="font-size:2rem;margin-bottom:0.5rem;opacity:0.3">💔</div><p>找不到符合條件的結果</p></div>`;
+    grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1"><div style="font-size:2rem;margin-bottom:0.5rem;opacity:0.3">😢</div><p>找不到符合條件的結果，您可以當第一位分享者</p></div>`;
     return;
   }
   grid.innerHTML = currentData.map((d, i) => `
